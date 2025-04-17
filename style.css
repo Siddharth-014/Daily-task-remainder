@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(100deg, #7a6767, #ce4d4d); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #bc5050, #626365); /* Gradient background */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #9b3012; 
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #42a5f5; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(66, 165, 245, 0.5);
+}
+
+button {
+    background-color: #717172; /* Blue button */
+    color: rgb(197, 42, 42);
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+#taskList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background: #468aba; /* Light blue */
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #1260a0; /* Blue border */
+    border-radius: 6px;
+    color: #0e0e0e; /* Dark blue text */
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+#taskList li:hover {
+    transform: translateX(10px); /* Slight movement on hover */
+    background: #ae4349; /* Lighter blue */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #842f2f;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #e53935; /* Red close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #b71c1c; /* Darker red on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+/* General Styles (already defined) */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Reduce font size for headings */
+    }
+
+    input, button {
+        font-size: 14px; /* Adjust input and button font size */
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+        margin: 20% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 10px;
+        width: 95%; /* Further adjust width for very small screens */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Further reduce font size for headings */
+    }
+
+    input, button {
+        font-size: 12px; /* Further adjust input and button font size */
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 95%; /* Adjust modal width for very small screens */
+        margin: 25% auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px; /* Increase container width for larger screens */
+    }
+
+    h1, h2 {
+        font-size: 2.5rem; /* Increase font size for headings */
+    }
+
+    input, button {
+        font-size: 18px; /* Increase input and button font size */
+        padding: 14px;
+    }
+
+    .modal-content {
+        width: 50%; /* Adjust modal width for larger screens */
+    }
+}

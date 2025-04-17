@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="home">
+        <h1>Daily Task Reminder</h1>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Enter Task Name" required>
+            <input type="datetime-local" id="taskTime" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="taskList">
+            <h2>Your Tasks</h2>
+            <ul id="tasks"></ul>
+        </div>
+    </div>
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">Task added successfully!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
